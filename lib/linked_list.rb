@@ -5,10 +5,23 @@ require_relative "node_class"
 
 class LinkedList
   # Represents the full list
-  
+  attr_accessor :head
+
+  def initialize
+    self.head = nil
+  end  
 
   def append(value)
     # Adds a new node containing "value" to the end of the list
+    if(self.head.nil?)
+      self.head = Node.new(value, nil)
+    else
+      last_node = self.head
+      while(!last_node.next_node.nil?)
+        last_node = last_node.next_node
+      end
+      last_node.next_node = Node.new(value, nil)
+    end
   end
 
   def prepend(value)
