@@ -11,4 +11,4 @@ list.append('cat')
 # list.append('snake')
 # list.append('turtle')
 
-puts list.head.data
+puts list.head.value

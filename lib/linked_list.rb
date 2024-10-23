@@ -1,6 +1,4 @@
 
-require_relative "node_class"
-
 # Linked list class
 
 class LinkedList
@@ -78,11 +76,11 @@ class LinkedList
   # Node Class
   class Node
     # contains two instance variables, #value and #next_node, set both as nil by default
-    attr_accessor :value, :next_node
+    attr_accessor :value, :nextNode
     
-    def initialize(value, next_node = nil)
+    def initialize(value, nextNode = nil)
       self.value = value
-      self.next_node = next_node
+      self.nextNode = nextNode
     end
   end
 
