@@ -13,19 +13,22 @@ class LinkedList
 
   def append(value)
     # Adds a new node containing "value" to the end of the list
+    new_node = Node.new(value)
     if(@head.nil?)
-      @head = Node.new(value, nil)
+      @head = new_node
     else
-      last_node = @head
-      while(!last_node.next_node.nil?)
-        last_node = last_node.next_node
-      end
-      last_node.next_node = Node.new(value, nil)
+      @tail.next_node = new_node
     end
+
+    @tail = new_node
+    @size += 1
   end
 
   def prepend(value)
     # Adds a new node containing "value" to the start of the list
+    new_node = Node.new(value)
+    @head = new_node
+    @size += 1
   end
 
   def size

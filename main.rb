@@ -11,8 +11,7 @@ list = LinkedList.new
 # list.append('snake')
 # list.append('turtle')
 
-list.append(10)
+list.prepend(10)
 list.append(20)
 
-p list.head
-p list.head
+p list
