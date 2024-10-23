@@ -1,20 +1,22 @@
-
+require_relative "node.rb"
 # Linked list class
 
 class LinkedList
   # Represents the full list
-  attr_accessor :head
+  attr_accessor :head, :tail, :size 
 
   def initialize
-    self.head = nil
+    @head = nil
+    @tail = nil
+    @size = 0
   end  
 
   def append(value)
     # Adds a new node containing "value" to the end of the list
-    if(self.head.nil?)
-      self.head = Node.new(value, nil)
+    if(@head.nil?)
+      @head = Node.new(value, nil)
     else
-      last_node = self.head
+      last_node = @head
       while(!last_node.next_node.nil?)
         last_node = last_node.next_node
       end
@@ -28,14 +30,17 @@ class LinkedList
 
   def size
     # returns the total number of nodes in the list
+    @size
   end
 
   def head
     # returns the first node in the list
+    @head
   end
 
   def tail
     # returns the last node in the list
+    @tail
   end
 
   def at(index)
@@ -52,6 +57,7 @@ class LinkedList
 
   def find(value)
     # returns the index of the node containing "value", or nil if not found
+    
   end
 
   def to_s
@@ -72,17 +78,6 @@ class LinkedList
     # removes the "value" of a node at a given "index"
   end
 
-  private
    
-  # Node Class
-  class Node
-    # contains two instance variables, #value and #next_node, set both as nil by default
-    attr_accessor :value, :next_node
-    
-    def initialize(value, next_node = nil)
-      self.value = value
-      self.next_node = next_node
-    end
-  end
 
 end

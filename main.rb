@@ -14,5 +14,5 @@ list = LinkedList.new
 list.append(10)
 list.append(20)
 
-puts list.head.value
-puts list.head.nextNode.value
+p list.head
+p list.head
