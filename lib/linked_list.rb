@@ -14,11 +14,11 @@ class LinkedList
     if(self.head.nil?)
       self.head = Node.new(value, nil)
     else
-      last_node = self.head
-      while(!last_node.next_node.nil?)
-        last_node = last_node.next_node
+      lastNode = self.head
+      while(!lastNode.nextNode.nil?)
+        lastNode = lastNode.nextNode
       end
-      last_node.next_node = Node.new(value, nil)
+      lastNode.nextNode = Node.new(value, nil)
     end
   end
 
@@ -73,6 +73,7 @@ class LinkedList
   end
 
   private
+   
   # Node Class
   class Node
     # contains two instance variables, #value and #next_node, set both as nil by default
