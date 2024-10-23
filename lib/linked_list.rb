@@ -74,5 +74,16 @@ class LinkedList
     # removes the "value" of a node at a given "index"
   end
 
+  private
+  # Node Class
+  class Node
+    # contains two instance variables, #value and #next_node, set both as nil by default
+    attr_accessor :value, :next_node
+    
+    def initialize(value, next_node = nil)
+      self.value = value
+      self.next_node = next_node
+    end
+  end
 
 end
