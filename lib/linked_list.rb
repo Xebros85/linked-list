@@ -14,11 +14,11 @@ class LinkedList
     if(self.head.nil?)
       self.head = Node.new(value, nil)
     else
-      lastNode = self.head
-      while(!lastNode.nextNode.nil?)
-        lastNode = lastNode.nextNode
+      last_node = self.head
+      while(!last_node.next_node.nil?)
+        last_node = last_node.next_node
       end
-      lastNode.nextNode = Node.new(value, nil)
+      last_node.next_node = Node.new(value, nil)
     end
   end
 
@@ -77,11 +77,11 @@ class LinkedList
   # Node Class
   class Node
     # contains two instance variables, #value and #next_node, set both as nil by default
-    attr_accessor :value, :nextNode
+    attr_accessor :value, :next_node
     
-    def initialize(value, nextNode = nil)
+    def initialize(value, next_node = nil)
       self.value = value
-      self.nextNode = nextNode
+      self.next_node = next_node
     end
   end
 
